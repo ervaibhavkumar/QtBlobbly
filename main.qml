@@ -15,7 +15,6 @@ Window {
         repeat: true
         onTriggered: {
             canvas.requestPaint()
-            stop()
         }
     }
 
@@ -50,7 +49,6 @@ Window {
                     startX = x
                     startY = y
                 }
-                console.log(angle, x, y)
                 ctx.moveTo(x, y)
             }
 
