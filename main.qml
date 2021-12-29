@@ -37,19 +37,13 @@ Window {
             const r = width / 8;
             const center = width / 2;
 
-            var startX, startY;
-            for ( var angle = 0; angle <= Math.PI * 2; angle += 0.1 ) {
-                const offset = ( Math.random() * -25 ) + 50
-                const x = ( center + offset ) + r * Math.cos(angle)
-                const y = ( center + offset ) + r * Math.sin(angle)
+            var step = 2*Math.PI/30;
 
-                if ( angle !== 0 ) {
-                    ctx.lineTo(x, y)
-                } else {
-                    startX = x
-                    startY = y
-                }
-                ctx.moveTo(x, y)
+            for(var theta=0;  theta < 2*Math.PI;  theta+=step) {
+                const offset = ( Math.random() * -25 ) + 50
+                const x = ( center + offset ) + r * Math.cos(theta)
+                const y = ( center + offset ) + r * Math.sin(theta)
+                ctx.lineTo(x,y);
             }
 
             ctx.closePath()
