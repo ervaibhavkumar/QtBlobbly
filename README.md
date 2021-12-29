@@ -2,4 +2,4 @@
 
 A blobby curve generator using QML
 
-![DEMO](Blobby.gif)
+![DEMO](Blobby.gif?)
